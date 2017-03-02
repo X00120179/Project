@@ -1,6 +1,16 @@
 <div class="container">
   <div class="jumbotron">
-    <h1>About us coming soon!</h1>
-    <span class="fa fa-spinner fa-pulse fa-5x"></span>
+    <!--<h1>About us coming soon!</h1>
+    <span class="fa fa-spinner fa-pulse fa-5x"></span>-->
+
+    <h1>Who are we?</h1>
+    <ul>
+      <li *ngFor='let items of items | async'>
+       <h3> {{items.$key}}: {{items.$value}}</h3>
+      </li>
+    </ul>
+
+    
+
   </div>
 </div>

@@ -1,6 +1,14 @@
 <div class="container">
   <div class="jumbotron">
-    <h1>Products coming soon!</h1>
-    <span class="fa fa-spinner fa-pulse fa-5x"></span>
+    <!--<h1>Products coming soon!</h1>
+    <span class="fa fa-spinner fa-pulse fa-5x"></span>-->
+
+    <!-- Display list of products from the database. Constructed in the products.component.ts file-->
+    <ul>
+      <li *ngFor='let items of items | async'>
+       <h3> {{items.$key}}: {{items.$value}}</h3>
+      </li>
+    </ul>
+
   </div>
 </div>
